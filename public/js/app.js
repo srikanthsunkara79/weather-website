@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', function (event) {
     const location = searchElement.value
     console.log(location)
   
-    const geoCodeURL = 'http://localhost:2000/weather?address=' + encodeURIComponent(location)
+    const geoCodeURL = '/weather?address=' + encodeURIComponent(location)
 
     fetch(geoCodeURL).then(function (response) {
         response.json().then(function (data) {
