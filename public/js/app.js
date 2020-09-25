@@ -1,4 +1,4 @@
-console.log('Clinet side Javascript messages is loaded')
+
 
 
 
