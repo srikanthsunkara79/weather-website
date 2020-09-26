@@ -13,9 +13,10 @@ const geoCode = function (address, callBack) {
             } else if (body.features.length === 0) {
                 callBack('Unable to find location. Try another search')
             } else {
+                console.log(JSON.stringify(body))
                 callBack(undefined, {
-                    latitude: body.features[0].center[0],
-                    longitude: body.features[0].center[1],
+                    latitude: body.features[0].geometry.coordinates[0],
+                    longitude: body.features[0].geometry.coordinates[1],
                     place: body.features[0].place_name
                 })
             }
